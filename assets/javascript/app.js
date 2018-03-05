@@ -34,10 +34,12 @@ $(document).ready(function () {
       var name = $('<td>').text(trainData.TrainName)
       var dest = $('<td>').text(trainData.TrainDestination)
 
-      var now = moment().format('MMMM Do YYYY, h:mm:ss a')
+      var initial = moment([trainData.InitalTrain]);
+      console.log(initial)
+      var now = moment().add(initial, "hour").calendar()
       console.log(now)
 
-      var initial = $('<td>').text(trainData.InitalTrain)
+      
 
     //   var nextArrival = $('<td>').text(timeTillNext)
 
