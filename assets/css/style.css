@@ -1,0 +1,33 @@
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+    width: 100%;
+}
+
+.main{
+     background: #007c91;
+     background-size: 1800% 1800%;
+}
+
+.inner{
+    background: linear-gradient(110deg, #7200ca 60%, #aa00ff 60%);
+}
+
+.trainHeader{
+    background: linear-gradient(110deg, #00acc1 60%, #00acc1 60%);
+    color: white;
+}
+
+.timeDisplay {
+    background: white;
+}
+
+.timeDisplayBody{
+    background: #00acc1;
+}
+
+.submitButton {
+    border: solid 2px white;
+
+}

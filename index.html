@@ -26,7 +26,68 @@
     <!-- Custom JS Code -->
     <script src="assets/javascript/app.js"></script>
 </head>
-<body>
-    
+<body class="main">
+    <div class="container inner">
+        <div class="container">
+            <div class="jumbotron text-center trainHeader z-depth-3">
+                <h1>Train Time</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!--Table-->
+                <table class="table table-hover z-depth-3">
+                
+                    <!--Table head-->
+                    <thead class="timeDisplay">
+                        <tr>                        
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency(min)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <!--Table head-->
+                
+                    <!--Table body-->
+                    <tbody class="timeDisplayBody" id="trains">
+                        
+                    </tbody>
+                    <!--Table body-->
+                
+                </table>
+                <!--Table-->
+            </div>
+        </div>    
+        <div class="row">
+            <div class="container">
+                <div class="card mb-5">
+                    <h4 class="card-header">Add Train</h4>
+                    <div class="card-body timeDisplayBody">
+                        <form>
+                            <div class="form-group">                                                       
+                                <label>Train Name</label>
+                                <input class="form-control" id="trainName" placeholder="Polar Express">
+                            </div>
+                            <div class="form-group">
+                                <label>Destination</label>
+                                <input class="form-control" id="trainDestination" placeholder="Tokyo">
+                            </div>
+                            <div class="form-group">
+                                <label>First Train Time (H:H:mm - military time)</label>
+                                <input class="form-control" id="initialTrain" placeholder="24:00">
+                            </div>
+                            <div class="form-group">
+                                <label>Frequency(min)</label>
+                                <input class="form-control" id="trainFrequency" placeholder="120">
+                            </div>
+                                <button type="submit" class="btn purple accent-4 waves-effect submitButton" id="submitButton">Submit</button>                            
+                        </form>
+                    </div>    
+                </div>    
+            </div>    
+        </div>
+    </div>
 </body>
 </html>
