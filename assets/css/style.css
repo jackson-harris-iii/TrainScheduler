@@ -17,6 +17,7 @@ body {
 .trainHeader{
     background: linear-gradient(110deg, #00acc1 60%, #00acc1 60%);
     color: white;
+    font-family: 'Mina', sans-serif;
 }
 
 .timeDisplay {
