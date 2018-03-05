@@ -33,13 +33,22 @@ $(document).ready(function () {
       var train = $('<tr>')
       var name = $('<td>').text(trainData.TrainName)
       var dest = $('<td>').text(trainData.TrainDestination)
+
+      var now = moment().format('MMMM Do YYYY, h:mm:ss a')
+      console.log(now)
+
       var initial = $('<td>').text(trainData.InitalTrain)
+
+    //   var nextArrival = $('<td>').text(timeTillNext)
+
+      var freq = $('<td>').text(trainData.TrainFrequency)
       var freq = $('<td>').text(trainData.TrainFrequency)
 
       train.append(name)
       train.append(dest)
-      train.append(initial)
       train.append(freq)
+    //   train.append(nextArrival)
+    //   train.append(timeRemaining)
 
       $('#trains').append(train)
   })
