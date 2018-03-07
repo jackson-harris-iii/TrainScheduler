@@ -35,18 +35,22 @@ $(document).ready(function () {
       var dest = $('<td>').text(trainData.TrainDestination)
       var freq = $('<td>').text(trainData.TrainFrequency)
 
-      var initial = moment([trainData.InitalTrain]);
+      var initial = moment(trainData.InitalTrain, "HH:mm").subtract(1, "years")
+      var difference = moment().diff(moment(initial), "minutes")
+      var howLongUntil = difference % trainData.TrainFrequency
+      var timeUntil = trainData.TrainFrequency - howLongUntil
+      var nextArrival = moment().add(timeUntil, "minutes").format("HH:mm")
+      console.log(nextArrival)
+
+      
+
+
       console.log(initial)
       var now = moment()
       console.log(now)
       
-      var nextArrival = now.from(initial)
-
-      var timeRemaining = now.to(nextArrival)
-      
-
       var displayNext = $('<td>').text(nextArrival);
-      var timeTillNext = $('<td>').text(timeRemaining)
+      var timeTillNext = $('<td>').text(timeUntil)
       
 
       train.append(name)
