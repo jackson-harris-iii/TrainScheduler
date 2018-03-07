@@ -6,4 +6,4 @@ The scheduler stores the information in firebase.
 
 See it Here: https://jackson-harris-iii.github.io/TrainScheduler/
 
-![Application Image](screenshot.png)
+![Application Image](assets/images/screenshot.png)
